@@ -1,0 +1,128 @@
+
+<div class="try"
+	style="
+		min-height: 100px;
+		width: 150px;
+		background: green;
+		font-size: 22px;
+		">
+		result show here
+	</div>
+	<input type="text" class="first" placeholder="input your value"><br>
+	<input type="text" class="Second" placeholder="input your value">
+	<br>
+	<button type="button" onclick="addition()">ADDITION</button>
+	<br>
+	<button type="button" onclick="printmyname()"> print myname</button>
+	<br>
+	<button type="button" onclick="alert('maynuddin hasan')">click me</button>
+	<br>
+	<button type="button" onclick="popup()" >popup</button>
+	<br>
+	<!-- <input type="text" onblur="alert('onblur is working')" placeholder="onblur"><br>
+	<input type="text" onchange="alert('onchange is working')" placeholder="onchange"><br>
+	<input type="text" onfocus="alert('onfocus working')" placeholder="onfocus"><br>
+	<input type="text" onselect="alert('onselect working')" placeholder="onselect"><br> -->
+	<input type="text" ondblclick="alert('ondblclick working')" placeholder="ondblclick"><br>
+	<input type="text" onmouseover ="alert('ondblclick working')" placeholder="ondblclick"><br>
+	<input type="button" onmouseover ="confirm('ondblclick working')" placeholder="ondblclick"><br>
+	<button type="button" onclick="prompt('what is your site')" >popup</button><br><hr>
+
+
+	<hr>
+
+	<select id="country" onchange="getCountry()">
+		<option>Select Country</option>
+		<option value="ban">Bangladesh</option>
+		<option value="ind">India</option>
+		<option value="pak">Pakistan</option>
+	</select>
+		
+
+	<hr>
+
+	<input type="text" onchange="inputChange()" id="changeValue" placeholder="Get change value">
+
+	<script type="text/javascript">
+
+		function inputChange(){
+			var changeValue = document.getElementById('changeValue').value;
+			console.log(changeValue);
+		}
+
+		function getCountry(){
+			var country = document.getElementById('country').value;
+			console.log(country);
+		}
+		
+
+		var date= new Date();
+		// 2020-04-27
+
+		/*
+
+			month = 09;
+			month = 10
+
+			(month>=10 ? month : "0"+month  ) // after ? is true part and after : is false part.
+		  
+		   if(month>=10){
+				month ="0"+month;
+		   }
+
+		   var a =5; var b = 6;
+		   if(b>a){
+				true
+		   }else{
+				false
+		   }
+			
+			(b>a ? true : false)
+
+	
+		*/
+		var year = date.getFullYear();
+		var month = date.getMonth();
+		var day = date.getDay();
+			
+			console.log("Fucking month is : "+month);
+
+		var custom_date = year+"-"+(month>=10 ? month : "0"+month)+"-"+day;
+		console.log(custom_date);
+		
+	</script>
+	
+<hr>
+
+</script>
+
+
+
+
+
+<select id="selectcountry" onchange="selectCountry()">
+		<option>Select country</option>
+		<option value="ban">bangladesh</option>
+		<option value="ind">india</option>
+		<option value="jap">japan</option>
+		<option value="pak">pakistan</option>
+	</select>
+
+	  <script type="text/javascript">
+	   	function selectCountry(){
+		var country=document.getElementById("selectcountry").value;
+		console.log(country);
+		}
+	</script>
+
+
+
+<script type="text/javascript" src="pjs.js">
+	
+</script>
+
+
+
+
+
+

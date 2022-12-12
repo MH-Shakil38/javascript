@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery slider</title>
+	<link rel="stylesheet" type="text/css" href="jquery.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<h1>JavaScript Fundamental Tutorial</h1>
+	<p>JavaScript - Easy to Lerne - Easy to Progamming Language</p>
+	<h2>JQUERY SLIDER......<hr></h2>
+	<div class="slide">
+		<h3 class="slideheading">THIS IS A SLIDER HEADING..........</h3>
+	<p class="sliderptag" id="paraid">JavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to <b>Progamming</b> LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - <mark>Easy to Progamming LanguageJavaScript </mark>- Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming Language</p>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var gettext=$('#paraid').text();
+		var gethtml=$('#paraid').html();
+		var getval=$('#name').val();
+
+		$("#btn1").click(function(){
+			alert(gettext)
+		})
+		$("#btn2").click(function(){
+			alert(gethtml)
+		})
+		$("#btn3").click(function(){
+			alert("the value is : "+$('#name').val());
+		})
+	})
+
+</script>
+	<button type="button" id="btn1">Get text</button><br>
+	<button type="button" id="btn2">Get html</button><br>
+	<input type="text" id="name" value="maynuddin hasan">
+	<button type="button" id="btn3">Get text</button>
+	
+
+</body>
+</html>

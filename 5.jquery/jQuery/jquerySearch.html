@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery SEARCH...</title>
+	<link rel="stylesheet" type="text/css" href="jquery.css">
+	<script src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="../jqueryui.js"></script>
+	<style type="text/css">
+		body{
+	background: #eeefff none repeat scroll 0 0;
+
+		}
+		ul{
+      list-style: none;
+      text-align: left;
+    }
+    input{
+      text-align: left;
+      margin: 0px;
+      padding: 6px;
+    }
+
+	</style>
+</head>
+<body>
+	<h1>JavaScript Fundamental Tutorial</h1>
+	<p>JavaScript - Easy to Lerne - Easy to Progamming Language</p>
+	<h2>JQUERY SEARCH...<hr></h2>
+	<p>please enter your search item</p>
+	<input type="text" id="myInput">
+  <ul id="myList" >
+    <li>Maynuddin</li>
+    <li>East Delta university</li>
+    <li>East West university</li>
+    <li>PCIU</li>
+    <li>CU</li>
+    
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      var dummy ="abcd";
+      var a = dummy.indexOf("a");
+      console.log("C found at index no : ",a);
+
+      $("#myInput").keyup(function(){
+
+        var value = $(this).val().toLowerCase();
+        
+        $('#myList li').filter(function(){
+
+          //$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          var found = $(this).text().toLowerCase().indexOf(value);
+
+          if (found > -1){
+            $(this).css({"display":"block"});
+          }else{
+            $(this).css({"display":"none"});
+          }
+        });
+
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input text real time</title>
+	<!-- <script src="jqueryui.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="jqcss.css"> -->
+	<script src="jqueryIndex.js"></script>
+</head>
+<body>
+	<h2>please click your gender</h2>
+	<p>
+	<leble><input id="g" type="checkbox" name="gender" value="male">Male</leble>
+	<leble><input id="g" type="checkbox" name="gender" value="female">female</leble>
+	</p>
+
+	<p><input type="button" name="button" value="get value"></p>
+	<script>
+			$("input[type='button']").click(function(){
+			var	checkbox=[];
+			//$("input[type='button']").click(function(){
+			//alert($('input[name="gender"]:checked').serialize());
+			$.each($('input[name="gender"]:checked'),function(){
+				checkbox.push($(this).val());
+			});
+				alert(checkbox)
+			
+
+			})
+		
+	</script>
+</body>
+</html>
+<!-- <input....... type="button">
+<input............ type="checkbox">
+<input............ type="color">
+<input............. type="date">
+<input type="datetime-local">
+<input............. type="email">
+<input............. type="file">
+<input type="hidden">
+<input............. type="image">
+<input type="month">
+<input.............. type="number">
+<input............. type="password">
+<input............. type="radio">
+<input type="range">
+<input............ type="reset">
+<input type="search">
+<input............. type="submit">
+<input type="tel">
+<input.............. type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+ -->

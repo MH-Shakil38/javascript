@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+<input type="text" id="edu" />
+<input type="text" id="keyup" placeholder="On Key Up style 2" />
+
+<button type="button" id="btn1">EDU BUTTON</button>
+<button type="button" id="btn2">EDU BUTTON 2</button>
+
+name : <input type="text" name="name">
+<br>email : <input type="email" name="email">
+
+<script>
+
+
+$(function(){
+
+ // abcd();
+
+})
+
+$(document).on("click","#btn1",function(){
+    alert("jQUery ALert");
+ });
+ 
+ $("#btn2").click(function(){
+    alert("second way alert view");
+ });
+ 
+
+ /* on key up style 1 */
+
+ $(document).on("keyup","#edu",function(){
+ 	var data = $("#edu").val();
+ 	console.log(data);
+ });
+
+
+ /* on keyup style 2*/
+
+ $("#keyup").keyup(function(){
+ 	var data = $("#keyup").val();
+ 	console.log(data);
+ });
+
+
+
+
+$(document).ready(function(){
+$('input').focus(function(){
+$(this).css('background-color','green')
+});
+$('input').blur(function(){
+$(this).css('background-color','red')
+});
+
+})
+
+
+
+
+</script>
+</body>
+</html>

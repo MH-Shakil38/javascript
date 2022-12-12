@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery CONDITONAL LOGIC...</title>
+	<link rel="stylesheet" type="text/css" href="jquery.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<h1 id="h1">JavaScript Fundamental Tutorial</h1>
+	<p>JavaScript - Easy to Lerne - Easy to Progamming Language</p>
+	<h2>CONDITINAL LOGIC...<hr></h2>
+	<form id="myform">
+	<table style="text-align: left;">
+		<tr>
+			<td>First name : </td>
+			<td><input type="text" name="Fname" id="requird"></td>
+		</tr>
+		<tr>
+			<td>Last Name : </td>
+			<td><input type="text" name="Lname" id="requird"></td>
+		
+		</tr>
+		<tr>
+			<td>Email : </td>
+			<td><input type="email" name="email"></td>
+		</tr>
+		<tr>
+			<td>website </td>
+			<td><input type="text" name="websit"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td style="text-align: left;">
+				<button type="button" id="submit">Submit</button>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+<div id="show"></div>
+<script>
+	
+	
+ $(document).ready(function(){
+	$('#submit').click(function(event){
+		var isvalid=true;
+		$('input[type="text"]#requird').each(function(){
+			if ($(this).val()=='') {
+				isvalid=false;
+				$(this).css({
+					'border':'1 px solid red',
+					'background':'#ffcece'
+				});
+			}else{
+				$(this).css({
+					'border':'','background':''
+				})
+
+			}
+		});
+		
+		if (isvalid == false) {
+			console.log("event is : "+event.preventDefault());
+
+		}else{
+			clear()
+			alert('submitted')
+
+		}
+	});
+});
+function clear(){
+	$('#myform :input').each(function(){
+		$(this).val('')
+	})
+}
+		
+		
+
+</script>
+
+	
+
+</body>
+</html>

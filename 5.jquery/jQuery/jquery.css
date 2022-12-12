@@ -1,0 +1,56 @@
+body{
+	background: #ddd none repeat scroll 0 0;
+	color :#555;
+	font-family: goergia;
+	font-size: 20px;
+	margin: 100px auto;
+	text-align: center;
+	width: 900px;
+}
+.peratag{
+	color: red;
+	font-size: 40px;
+	font-weight: bold;
+	font-style: italic;
+}
+.slide{
+	border: 1px solid #423333;
+	background: #90909040;
+	color:black;
+}
+.sliderptag{
+	text-align:justify;
+	padding:12px;
+    margin:5px;
+    padding-top: 0px;
+ 
+}
+.slideheading{
+	padding: 0px;
+	margin:0px;
+	text-align: center;
+	padding-top: 5px;
+	padding-left: 5px;
+	background: #808288;
+	padding-bottom:5px;
+	color:white;
+
+}
+.addclass{
+	font-size: 33px;
+    color: #ffd400;
+    background: #969696;
+    padding: 6px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.ancestor *{ 
+  display: block;
+  border: 2px solid white;
+  color: #947575;
+  padding: 5px;
+  margin: 15px;
+  margin-bottom:19px;
+}
+

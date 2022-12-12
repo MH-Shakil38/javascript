@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>javaScript Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="js.css">
+</head>
+<body>
+	<h1>JavaScript Fundamental Tutorial</h1>
+	<p>JavaScript - Easy to Lerne - Easy to Progamming Language</p><br>
+	<button type="button" onclick="SetTime()">SetTime</button>
+	<button type="button" onclick="ClearTime()">ClearTime</button>
+	<div id="show"></div>
+	
+		<script type="text/javascript">
+			var timeout;
+			function timeouttrigger(){
+				document.getElementById('show').innerHTML='time out has been started.........';
+			}
+			function SetTime(){
+				timeout=setTimeout('timeouttrigger()',4000);
+				document.getElementById('show').innerHTML='time out has been ended';
+			}
+			function ClearTime(){
+				clearTimeout(timeout);
+				document.getElementById('show').innerHTML='time out has been stoped';
+			}		
+
+		</script>
+
+
+	</body>
+</html>

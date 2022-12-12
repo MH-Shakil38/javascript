@@ -1,0 +1,123 @@
+
+<html>
+<head>
+	<title>
+		just try it
+	</title>
+</head>
+<body>
+	<select id="country" onchange="getcountry()">
+		<option>select one</option>
+		<option value="bangladsh">Bangladesh</option>
+		<option value="pakistan">pakistan</option>
+		<option value="india">india</option>
+		<option value="japan">japan</option>
+		<option value="china">china</option>
+	</select>
+	<script type="text/javascript">
+		function getcountry(){
+			var country=document.getElementById('country').value;
+			console.log(country);
+		}
+		function change(){
+			var change=document.getElementById("change").value;
+			console.log(change);
+		}
+		//dates......................................
+		var d=new Date();
+		var month= d.getMonth();month++;
+		var date=d.getDate();
+		var year=d.getFullYear();
+		console.log(date);
+		console.log(month);
+		console.log(year);
+		var output=date+'-'+month+'-'+year;
+		console.log(output);
+		var day=d.getDay();
+		console.log(day);
+
+		//times........................................
+		var hours     =  d.getHours();
+		var	minutes	 =  d.getMinutes();
+		var seconds	 =  d.getSeconds();
+		var t_output = 	hours+'-'+(minutes>=10 ? minutes : "0"+minutes)+'-'+(seconds>=10 ? seconds : '0'+seconds);
+		console.log(t_output);
+
+		//Dates formet................................
+		M_name = new Array('january','febroary','march','april','may','jun','julay','august','september','actuber','november','december');
+		month--;
+		var _date = date+' '+M_name[month]+' '+year;
+
+		console.log(_date);
+
+		var ampm='';
+		if (hours <12 ) {
+			ampm = 'AM'; 
+		}else{
+			ampm = 'PM';
+		}
+		if (hours == 0) {
+			hours = 12;
+		}
+		if (hours >12) {
+			hours= hours-12;
+		}
+		var fulltime=hours+':'+minutes+':'+seconds+' '+ampm;
+		console.log(fulltime);
+		//time function end....................................................
+	
+
+
+	</script>
+	<input type="text" id="change" onchange="change()" placeholder="enter your value">
+	<br>
+	<br>
+	<form action="" name="pform" method="post" onsubmit="formvalidation()">
+		<p><input type="text" name="firstname" id="firstname" placeholder="enter a value"></p>
+		<input type="submit" name="submit" value="Submit">
+
+	</form>
+
+
+<script>
+	function formvalidation(){
+			var f_value = document.pform.elements[0].value;
+		
+			console.log(f_value);
+		}
+ 
+
+function validateForm(){
+
+var t = document.wForm.elements[0].value;
+
+alert(t);
+
+}
+var str='bangladesh is the beautifull country'
+document.write(str.length);
+var string = "<br>maynuddin' i am lerning \"php\" and \"java script\"";
+document.write(string);
+var split="javascript is beautifull programming leanguage";
+var x= split.split(' ','5')
+document.write('<br>'+x[2]);
+
+
+ 
+
+</script>
+
+
+
+
+<form action="" name="wForm" method="post" onsubmit="validateForm()">
+<p><input type="text" name="first_name" id="first_name"/></p>
+<p><input type="submit" name="submit" value="Submit"/></p>
+</form>
+<hr>
+
+ 
+
+
+</body>
+</html>

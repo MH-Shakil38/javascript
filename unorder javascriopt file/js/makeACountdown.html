@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>javaScript Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="js.css">
+</head>
+<body>
+	<h1>JavaScript Fundamental Tutorial</h1>
+	<p>JavaScript - Easy to Lerne - Easy to Progamming Language</p><br>
+	<button type="button" onclick="startime()">Start Time</button>
+	<button type="button" onclick="stoptime()">Stop Time</button>
+	<div id="show"></div>
+	
+	<script type="text/javascript">
+		var countdown;
+		var countdownNumber;
+		function startime(){
+			countdownNumber=21;
+			countdowntrigger();
+
+		}
+
+		function countdowntrigger(){
+			if (countdownNumber>0){
+				countdownNumber--;
+				if (countdownNumber>=0) {
+					document.getElementById('show').innerHTML=countdownNumber;
+					countdown=setTimeout(countdowntrigger(),1000);
+
+				}
+			}
+		}
+		function stoptime(){
+			clearTimeout(countdown);
+		}
+
+
+		var i = 0;
+		var stop = setInterval(function(){
+			i++;
+			alert('hello world')
+			if (i==4) {
+				clearInterval(stop);
+			}
+
+		},1000);
+
+
+
+		</script>
+
+
+	</body>
+</html>

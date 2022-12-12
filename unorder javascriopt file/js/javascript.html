@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>javaScript Tutorial</title>
+	<link rel="stylesheet" type="text/css" href="js.css">
+</head>
+<body>
+	<h1>JavaScript Fundamental Tutorial</h1>
+	<p>JavaScript - Easy to Lerne - Easy to Progamming Language</p><br>
+	<p id="ptag">this is a peragrap tag</p>
+<button type="button" onclick="addStyle()">Add Style</button>
+<button type="button" onclick="remStyle()">Remove Style</button>
+<br>
+<br>
+<p id="demo">i live is satkania</p>
+<button type="button" onclick="rep()">change name</button>
+	<h2 style="color:#fff;font-weight: bold; background: #25888C;height: 50px;text-align: center;padding-top: 18px;" id="output">Output show here</h2>
+	
+	<!-- <script src="javascript.js"></script>
+	<br>
+	<button type="button" onclick="input_value()"
+	 style="padding: 4px 18px;
+	 		font-size: 20px;
+	 		background: #2d2d2d2d;
+	 		margin-top: 6px;
+	 		">input</button>
+	 		<br>
+
+	 <button type="button" onclick="prev_img()"
+	 style="padding: 4px 18px;
+	 		font-size: 20px;
+	 		background: #2d2d2d2d;
+	 		margin-top: 6px;
+	 		">prev</button>
+	 		<img id="img"name='img_slide' src="1.jpg" height="300px" width="600px">
+	 <button type="button" onclick="next_img()"
+	 style="padding: 4px 18px;
+	 		font-size: 20px;
+	 		background: #2d2d2d2d;
+	 		margin-top: 6px;
+	 		">Next</button>
+
+	<p id="output">Output show here</p> -->
+<!-- 	style add and removed -->
+
+
+
+<script type="text/javascript">
+
+function addStyle(){
+	document.getElementById('ptag').classList.add('peratag');
+	alert('just work')
+}
+function remStyle(){
+	alert('just work')
+	document.getElementById('ptag').classList.remove('peratag');
+
+}
+function rep(){
+	//alert('this button is work')
+var str=document.getElementById('demo').innerHTML;
+var rep=str.replace('satkania','chittagram');
+document.getElementById('demo').innerHTML=rep;
+}
+
+
+
+function myfunc(){
+		this.g=200;
+		this.h=300;
+		this.total=function(){
+		return this.g+this.h;
+	}
+}
+var d = new myfunc();
+alert(d.total())
+
+
+document.getElementById('output').innerHTML='this sum is : '+d.total();
+
+
+</script>
+<script type="text/javascript" href="javascript.js"></script>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery slider</title>
+	<link rel="stylesheet" type="text/css" href="jquery.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<h1>JavaScript Fundamental Tutorial</h1>
+	<p>JavaScript - Easy to Lerne - Easy to Progamming Language</p>
+	<h2>real use of jquery form validation...<hr></h2>
+	
+	<form id="myform" action="" method="post">
+		<table style="text-align: left;">
+			<tr>
+				<td id="x">Username</td>
+				<td><input type="text" name="" id="username" required="1"></td>
+				<td><span class="errorForm" id="username_error_msg"></td>
+			</tr>
+			<tr>
+				<td>password</td>
+				<td><input type="password" name="" id="password"required="1"></td>
+				<td><span class="errorForm" id="password_error_msg"></span></td>
+			</tr>
+			<tr>
+				<td>password again</td>
+				<td><input type="password" name="" id="password_again"required="1"></td>
+				<td><span class="errorForm" id="password_again_error_msg"></span></td>
+			</tr>
+			<tr>
+				<td>email</td>
+				<td><input type="email" id="email"></td>
+				<td><span class="errorForm" id="email_error_msg"required="1"></span></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td style="text-align: left; "><button id="submit">Submit</button></td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		$('#username_error_msg').show();
+		$('#password_error_msg').hide();
+		$('#password_again_error_msg').hide();
+		$('#email_error_msg').hide();
+
+		
+		var p_len="";
+		var u_len="";
+		var username="";
+		var password="";
+		var password_again="";
+		$(document).ready(function(){
+
+			$("#username").focusout(function(){
+			var u_len=$('#username').val().length;
+			if (u_len<5 || u_len>20) {
+				$('#username_error_msg').html('should be between 5-20 charecter');
+				$('#username_error_msg').css('color','red');
+			}
+		})
+		$('#password').focusout(function(){
+			var p_len=$('#password').val().length;
+			password=$('#password').val();
+			if (p_len<6 || p_len>8) {
+				$('#password_error_msg').html('password must be 6-8 char')
+				$('#password_error_msg').show()
+				$('#password_error_msg').css('color','red')
+
+			}
+			else{
+				$('#password_error_msg').hide()
+
+			}
+
+		})
+		$('#password_again').focusout(function(){
+			password_again=$('#password_again').val();
+			
+			if (password!=password_again) {
+				
+				$('#password_again_error_msg').html('password not metch')
+				$('#password_again_error_msg').show()
+
+
+			}
+		})
+		})
+		
+		
+
+	</script>
+
+</body>
+</html>

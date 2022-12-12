@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>try javascript</title>
+	<link rel="stylesheet" type="text/css" href="try.css">
+</head>
+<body>
+	<div class="header templet"> <h1>TRY JAVASCRIPT PART</h1> </div>
+	<div class="content templet">
+		<p></p>
+		<p></p>
+		<p></p>
+	<table id="table1" border="1" style="width: 400px; text-align: center; margin-left: 300px; background: #0B5345  ;">
+			<tr style="background:#212F3C;font-size: 20px;">
+				<th>Name</th>
+				<th>Nationality</th>
+				<th>Age</th>
+			</tr>
+			<tr>
+				<td>Maynuddin hasan</td>
+				<td>bangladeshi</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>Ripon uddin</td>
+				<td>bangladesh</td>
+				<td>24</td>
+			</tr>
+				<tr>
+				<td>Maynuddin hasan</td>
+				<td>bangladeshi</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>Ripon uddin</td>
+				<td>bangladesh</td>
+				<td>24</td>
+			</tr>
+				<tr>
+				<td>Maynuddin hasan</td>
+				<td>bangladeshi</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>Ripon uddin</td>
+				<td>bangladesh</td>
+				<td>24</td>
+			</tr>
+		</table>
+		
+		<script type="text/javascript">
+			var rows='';
+			var tagname = document.getElementsByTagName('p').length;
+
+			document.write(tagname+' p tag used in this page<br>');
+
+			var rows=document.getElementsByTagName('tr').length;
+			var data=document.getElementsByTagName('td').length;
+
+			document.write(rows+" rows here<br>");
+			document.write(data+' data here'+'<br>');
+
+			/*var len = document.getElementById("table1").rows.length;
+			document.write(len);*/
+
+		
+			for (var i = 0; i <= rows; i++) {
+				var record = document.getElementById("table1").rows[i].innerHTML;
+				document.write(record+'<br>');
+			}
+			
+			
+			
+			/*function confirm_try() {
+				confirm("do you love javascript? ");
+			}
+			function prompt_try(){
+				var name=prompt("pleas enter your name here.......");
+				if (name=="") {
+					alert("pleas ansower the quation....");
+				}else{
+					alert("successfully you given ansower the quation " + " : " + name);
+
+				}
+			}
+			var value=[12,23,34,45,56,66];
+			var arr2=[32,33,43,45,56,96];
+			for (var i = 0; i <value.length; i++) {
+				document.write(value[i]+"<br>");
+			}
+			var getarr=value.concat(arr2);
+			document.write(value+"<br>");
+			document.write(getarr+"<br>");
+			var string= 'Hello bangladesh';
+			document.write(string.substr(3,5));*/
+	
+
+
+		</script>
+		<!-- <br>
+		<button type="button" onclick="confirm_try()">confirm</button><br>
+		<button type="button" onclick="prompt_try()">prompt</button> -->
+		
+	</div>
+	<div class="footer templet"><h1>TRY JAVASCRIPT PART</h1></div>
+</body>
+</html>

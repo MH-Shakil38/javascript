@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input text real time</title>
+	<!-- <script src="jqueryui.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="jqcss.css"> -->
+	<script src="jqueryIndex.js"></script>
+</head>
+<body>
+	<p></p>
+	<input type="text" class="input" style="text-align: left;">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('input').keypress(function(){
+				var value=$(this).val();
+				$('p').text(value);
+				})
+			$('.send').click(function(){
+					//$('p').text(value)
+					$('input').val('')
+					
+			})
+			$('')
+		})
+	</script>
+	<button type="button" class="send">Send</button>
+</body>
+</html>

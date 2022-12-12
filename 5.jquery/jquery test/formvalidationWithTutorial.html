@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>input text real time</title>
+	<!-- <script src="jqueryui.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="jqcss.css"> -->
+	<script src="jqueryIndex.js"></script>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<h2>jquery form validation</h2>
+	<div align="left">
+	<div class="username_div">
+		<label>User Name</label>
+		<input type="text" name="username" class="username">
+		<p id="username_error"></p>
+		
+	</div>
+	<div class="password_div">
+		<label>Password</label>
+		<input type="password" name="password" class="password">
+		<p id="password_error"></p>
+	</div>
+	<div class="password_again_div">
+		<label>Password Again</label>
+		<input type="password" name="password_again" class="password_again">
+		<p id="password_again_error"></p>
+	</div>
+	<div class="email_div">
+		<label>Email</label>
+		<input type="email" name="email" class="email">
+		<p id="email_error"></p>
+	</div>
+	<div class="dob_div">
+		<label>Date of Birth</label>
+		<input type="date" name="dob" class="dob" min="1990-01-01" max="2000-01-01">
+	</div>
+	<div class="skill_div">
+		<P>SKILL<br>
+		<input type="checkbox" name="skill" class="skill" value="Html">
+		<label>HTML</label><br>
+		<input type="checkbox" name="skill" class="skill" value="css">
+		<label>CSS</label><br>
+		
+		<input type="checkbox" name="skill" class="skill" value="javascript">
+		<label>JAVASCRIPT</label><br>
+
+		<input type="checkbox" name="skill" class="skill" value="jquery">
+		<label>JQUERY</label><br>
+		<input type="checkbox" name="skill" class="skill" value="php">
+		<label>PHP</label><br>
+
+		<input type="checkbox" name="skill" class="skill" value="sql">
+		<label>SQL</label><br>
+		<p class="skill_error"></p>
+
+		</P>
+		
+	</div>
+	<div class="gender_div">
+		<label>Gender : </label>
+		
+		<input type="radio" name="gender" class="gender" value="Male">
+		<label>Male</label>
+		<input type="radio" name="gender" class="gender" value="Female">
+		<label>Female</label>
+		<input type="radio" name="gender" class="gender" value="Other">
+		<label>Other</label>
+		
+		<p id="gender_error"></p>
+	</div>
+	<div class="submit_div">
+		
+		<input type="submit" name="submit" class="submit" value="Send">
+		<p id="submit_error"></p>
+	</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var username_error=true;
+			var password_error=true;
+			var password_again_error=true;
+			var email_error=true;
+			var skill_error=true;
+			var gender_error=true;
+
+			$('.username').keyup(function(){
+
+				username_check();
+			})
+			$('.password').keyup(function(){
+				password_check();
+			})
+			$('.password_again').keyup(function(){
+				password_again_check();
+			})
+			$('.email').keyup(function(){
+				email_check();
+			})
+			$('.gender').click(function(){
+				gender_check();
+			})
+			$('.skill').click(function(){
+				skill_check();
+			})
+			$('.dob').click(function(){
+				dob_check();
+			})
+
+
+			
+			
+			function username_check(){
+				var username=$('.username').val();
+				//var username_filter= /(?=[a-zA-Z0-9-]{5,25}$)^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$/;
+				if (username=='') {
+					$('#username_error').text('pleas fillup this fild')
+					$('#username_error').css('color','red')
+					username_error=false;
+					return false;
+				}else{
+					//$('#username_error').text('')
+				}
+				if(username.length < 3 ) {
+					$('#username_error').text('user name must be 3-20 char')
+					$('#username_error').css('color','red')
+					username_error=false;
+					return false;
+				}else{
+					$('#username_error').text('')
+				}
+				if(username.length >= 20) {
+					$('#username_error').text('user name must be 3-20 char')
+					$('#username_error').css('color','red')
+					username_error=false;
+					return false;
+				}else{
+					$('#username_error').text('')
+
+				}
+			}
+			function password_check(){
+				var password=$('.password').val();
+				var password_again=$('.password_again').val();
+
+				if (password.length == '') {
+					$('#password_error').text('pleas fillup this fild')
+					$('#password_error').css('color','red')
+					 password_error=false;
+					return false;
+				}else{
+					$('#password_error').text('')
+				}
+				if(password.length < 6 ) {
+					$('#password_error').text('password must be 6-10 char')
+					$('#password_error').css('color','red')
+					password_error=false;
+					return false;
+				}else{
+					$('#username_error1').text('')
+				}
+				if(password.length >= 10) {
+					$('#password_error').text('password must be 3-20 char')
+					$('#password_error').css('color','red')
+					 password_error=false;
+					return false;
+				}else{
+					$('#password_error').text('')
+
+				}
+				
+
+			}
+
+			function password_again_check(){
+				var password=$('.password').val();
+				var password_again=$('.password_again').val();
+				if (password==password_again) {
+					if (password_again=='') {
+						$('#password_again_error').text('please filup this fild');
+						$('#password_again_error').css('color','red');
+						password_again_error=false;
+						return false;
+					}else{
+					$('#password_again_error').text('password match');
+					$('#password_again_error').css('color','green');
+				}
+				}else{
+					
+					$('#password_again_error').text('password not match');
+					$('#password_again_error').css('color','red');
+					password_again_error=false;
+					return false;
+				}
+			}
+
+			function email_check(){
+				var email_filter= new RegExp(/^[+a-zA-z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+				var email=$('.email').val();
+				if (email=='') {
+					$('#email_error').text('email not be emapty');
+					$('#email_error').css('color','red');
+					email_error=false;
+					return false;
+
+				}else{
+					if(email_filter.test(email)){
+					$('#email_error').text('')
+
+				}else{
+					$('#email_error').text('invalid email')
+					$('#email_error').css('color','red')
+					email_error=false;
+
+				}
+				}
+				
+				
+			}
+			function dob_check(){
+				var dob=$('.dob').val();
+				if (dob) {}
+			}
+
+			function skill_check(){
+			
+			var skill=[];
+			var skill_len=$('input[name="skill"]:checked').length;
+			if(skill_len>=2) {
+				$('.skill_error').text('')
+			}else{
+				$('.skill_error').text('at list two skill')
+				$('.skill_error').css('color','red')
+				skill_error=false;
+				return false;
+
+
+			}
+
+			
+	}
+			function gender_check(){
+				var gender=$('input[name="gender"]:checked').val();
+				var gender_len=$('input[name="gender"]:checked').length;
+				
+				if (gender_len=='1') {
+					$('#gender_error').text('');
+					
+
+				}else{
+					$('#gender_error').text('gender not be empty');
+					$('#gender_error').css('color','red');
+					gender_error=false;
+					return false;
+
+				}
+			
+			}
+
+			$('.submit').click(function(){
+			var dob=$('.dob').val();
+			if ((dob>1990-01-01) &&(dob<2000-01-01)) {
+				alert('working')
+			}
+			 username_error=true;
+			 password_error=true;
+			 password_again_error=true;
+			 email_error=true;
+			 skill_error=true;
+			 gender_error=true;
+			 username_check();
+			 password_check();
+			 password_again_check();
+			 email_check();
+			 skill_check();
+			 gender_check();
+			 var gender=$('input[name="gender"]:checked').val();
+			 
+			 
+
+			 if ( (username_error==true) && (password_error==true) && (password_again_error==true) && (password_error==true) && (gender_error==true) && (skill_error==true)) {
+				var username=$('.username').val();
+				var password=$('.password').val();
+				var skill=[];
+				var email=$('.email').val();
+				$.each($('input[name="skill"]:checked'),function(){
+				skill.push($(this).val());
+				})
+			 	alert('succesfully submited ')
+			 	return true;
+			 }else{
+			 	
+			 	return false;
+			 	
+			 }
+			})
+
+		})
+				
+
+			
+	</script>
+
+
+</body>
+</html>

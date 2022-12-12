@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery slider</title>
+	<link rel="stylesheet" type="text/css" href="jquery.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<h1>JavaScript Fundamental Tutorial</h1>
+	<p>JavaScript - Easy to Lerne - Easy to Progamming Language</p>
+	<h2>JQUERY SLIDER......<hr></h2>
+	<div class="slide">
+		<h3 class="slideheading">THIS IS A SLIDER HEADING..........</h3>
+	<p class="sliderptag" id="paraid">JavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to <b>Progamming</b> LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - <mark>Easy to Progamming LanguageJavaScript </mark>- Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming LanguageJavaScript - Easy to Lerne - Easy to Progamming Language</p>
+	</div>
+
+	<input type="text" class="same" placeholder="FIrst Name"> <br>
+	<input type="text" class="same" placeholder="Last Name"> <br>
+	<input type="text" class="same" placeholder="Nick Name Name"> <br>
+
+
+<script type="text/javascript">
+	
+	$(".same").keyup(function(evt){
+		var name = $(".same").val();
+		console.log("Name is : ",name,"EVent : ",evt.target.value);
+	});
+
+
+	// $(document).on("keyup",".same",function(){
+	// 	var name = $(this).val();
+	// 	console.log("Name : ",name);
+	// });
+		
+
+</script>
+	<button type="button" id="btn1">remove</button><br>
+	<button type="button" id="btn2">empty</button><br>
+
+	
+
+</body>
+</html>
